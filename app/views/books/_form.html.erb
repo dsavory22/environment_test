@@ -14,6 +14,15 @@
   <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
+
+    <%= form.label :author%>
+    <%= form.text_field :author%>
+
+    <%= form.label :release %>
+    <%= form.date_select :release %>
+
+    <%= form.label :price%>
+    <%= form.number_field :price, step: :any%>
   </div>
 
   <div class="actions">
