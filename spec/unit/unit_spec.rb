@@ -12,19 +12,25 @@ RSpec.describe Book, type: :model do
 
   it 'is not valid without a name' do
     subject.title = nil
+    
+    expect(subject).not_to be_valid
+  end
+
+  it 'is not valid without an author' do
+    subject.author = nil
+    subject.title = "harry potter"
+    expect(subject).not_to be_valid
+  end
+
+  it 'is not valid without a price' do
+    subject.price = nil
+    subject.author = "that lady"
     expect(subject).not_to be_valid
   end
 
   it 'is not valid without a release' do
     subject.release = nil
-    expect(subject).not_to be_valid
-  end
-  it 'is not valid without a price' do
-    subject.price = nil
-    expect(subject).not_to be_valid
-  end
-  it 'is not valid without an author' do
-    subject.author = nil
+    subject.price = 12.12
     expect(subject).not_to be_valid
   end
 end
