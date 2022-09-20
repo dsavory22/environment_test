@@ -2,7 +2,7 @@ require 'rails_helper'
 
 # Specs in this file have access to a helper object that includes
 # the UserBooksHelper. For example:
-#
+# 
 # describe UserBooksHelper do
 #   describe "string concat" do
 #     it "concats two strings with spaces" do
